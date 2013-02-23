@@ -8,15 +8,13 @@ import org.bukkit.World;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.world.WorldInitEvent;
-import org.bukkit.event.world.WorldLoadEvent;
 import org.bukkit.event.world.WorldUnloadEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LoadControl extends JavaPlugin implements Listener {
 	
-	private List<String> parsedworlds = new ArrayList<>();
+    private List<String> parsedworlds = new ArrayList<>();
 	
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
@@ -32,14 +30,16 @@ public class LoadControl extends JavaPlugin implements Listener {
     	World world = event.getWorld();
     	String worldname = world.getName();
     	if (!this.parsedworlds.contains(worldname)) {
-    	List<String> worlds = this.getConfig().getStringList("worlds");
-    			if ( worldname.contains("myst") || worldname.contains("age") ) {
+    	List<String> blacklist = this.getConfig().getStringList("blacklist");
+    		for ( int index = 0; index < ( blacklist.size() - 1 ); index++ ) {
+    			if ( worldname.contains( blacklist.get(index) ) ) {
     				world.setKeepSpawnInMemory(false);
     				Bukkit.unloadWorld(worldname, false);
     				this.parsedworlds.add(worldname);
     				new WorldUnloadEvent(world);
-    				getLogger().info("Prevented " + worldname + " from keeping spawn loaded");
+    				getLogger().info("Prevented " + worldname + " from keeping spawn loaded.");
     			}
+    		}
     	}
     }
 }
