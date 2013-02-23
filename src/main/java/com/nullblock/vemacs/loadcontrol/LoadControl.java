@@ -31,7 +31,7 @@ public class LoadControl extends JavaPlugin implements Listener {
     	String worldname = world.getName();
     	if (!this.parsedworlds.contains(worldname)) {
     	List<String> blacklist = this.getConfig().getStringList("blacklist");
-    		for ( int index = 0; index < ( blacklist.size() - 1 ); index++ ) {
+    		for ( int index = 0; index < blacklist.size(); index++ ) {
     			if ( worldname.contains( blacklist.get(index) ) ) {
     				world.setKeepSpawnInMemory(false);
     				Bukkit.unloadWorld(worldname, false);
