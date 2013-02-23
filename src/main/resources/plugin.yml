@@ -1,6 +1,6 @@
 author: vemacs
 database: false
-description: "Controls what worlds to keep in memory\r\n"
+description: "Controls what worlds to keep in memory"
 main: com.nullblock.vemacs.loadcontrol.LoadControl
 name: LoadControl
 startup: startup

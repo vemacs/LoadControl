@@ -35,6 +35,7 @@ public class LoadControl extends JavaPlugin implements Listener {
     				world.setKeepSpawnInMemory(false);
     				Bukkit.unloadWorld(worldname, false);
     				this.parsedworlds.add(worldname);
+    				getLogger().info("Prevented " + worldname + "from keeping spawn loaded");
     			}
     		}
     		if (mode.equals("whitelist")) {
@@ -42,6 +43,7 @@ public class LoadControl extends JavaPlugin implements Listener {
     				world.setKeepSpawnInMemory(false);
     				Bukkit.unloadWorld(worldname, false);
     				this.parsedworlds.add(worldname);
+    				getLogger().info("Prevented " + worldname + "from keeping spawn loaded");
     			}
     		}
     	}
