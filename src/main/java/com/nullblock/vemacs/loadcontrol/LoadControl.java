@@ -29,7 +29,6 @@ public class LoadControl extends JavaPlugin implements Listener {
     	String worldname = world.getName();
     	List<String> worlds = this.getConfig().getStringList("worlds"); 
     	String mode = this.getConfig().getString("mode"); 
-    	if (!this.parsedworlds.contains(worldname)){
     		if (mode.equals("blacklist")) {
     			if (worlds.contains(worldname)) {
     				world.setKeepSpawnInMemory(false);
@@ -45,7 +44,6 @@ public class LoadControl extends JavaPlugin implements Listener {
     				this.parsedworlds.add(worldname);
     				getLogger().info("Prevented " + worldname + "from keeping spawn loaded");
     			}
-    		}
     	}
     }
 }
