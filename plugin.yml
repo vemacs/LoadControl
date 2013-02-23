@@ -4,4 +4,4 @@ description: "Controls what worlds to keep in memory"
 main: com.nullblock.vemacs.loadcontrol.LoadControl
 name: LoadControl
 load: startup
-version: '1.0'
+version: '1.0.1'
