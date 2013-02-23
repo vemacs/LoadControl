@@ -1,12 +1,6 @@
 # Configuration file for LoadControl
 # by vemacs
 
-# Determines what filtering should be used
-
-# Whitelisting allows only listed worlds to keep spawn in memory
-# Blacklisting denies only listed worlds from keeping spawn in memory
-mode: blacklist
-
 # List of worlds
 blacklist:
     - myst
