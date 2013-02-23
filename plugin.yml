@@ -3,5 +3,5 @@ database: false
 description: "Controls what worlds to keep in memory"
 main: com.nullblock.vemacs.loadcontrol.LoadControl
 name: LoadControl
-startup: startup
+load: startup
 version: '1.0'
