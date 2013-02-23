@@ -8,8 +8,6 @@
 mode: blacklist
 
 # List of worlds
-worlds:
-    - world
-    - world_the_end
-    - world_nether
-    - world_twilightforest
+blacklist:
+    - myst
+    - age
