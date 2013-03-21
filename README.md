@@ -10,10 +10,10 @@ Prevents mystcraft worlds from keeping regions loaded
 
 Each world still takes around ~10mb for weather and others, though.
 
-Stable release
+Builds
 --------------
 
-http://cl.ly/N8CP/LoadControl.jar
+(Builds are here)[http://dev.nullblock.com:8080/job/LoadControl/]
 
 Testing
 -------
