@@ -13,7 +13,7 @@ Each world still takes around ~10mb for weather and others, though.
 Builds
 --------------
 
-(Builds are here)[http://dev.nullblock.com:8080/job/LoadControl/]
+[Builds are here](http://dev.nullblock.com:8080/job/LoadControl/)
 
 Testing
 -------
