@@ -1,0 +1,7 @@
+# Configuration file for LoadControl
+# by vemacs
+
+# List of worlds
+blacklist:
+    - myst
+    - age
